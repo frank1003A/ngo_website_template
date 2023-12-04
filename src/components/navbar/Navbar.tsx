@@ -163,7 +163,7 @@ const MobileNav = () => {
         toggled={isOpen}
         toggle={setOpen}
       />
-      {/**<div
+      <div
         role="dialog"
         onClick={() => setOpen(false)}
         className={css({
@@ -175,13 +175,13 @@ const MobileNav = () => {
           transition: ".5s",
           transform: isOpen ? "translateX(0%)" : "translateX(100%)",
         })}
-      ></div> */}
+      ></div>
       <div
         className={css({
-          /**  pos: "fixed",
+          pos: "fixed",
           top: 70,
-          left: 0, */
-          w: "100%",
+          left: 0,
+          w: "300px",
           h: "100%",
           bottom: 0,
           bgColor: "white",
@@ -197,7 +197,6 @@ const MobileNav = () => {
           {[...NAV_ITEMS].map((n) => {
             return (
               <Link
-                autoFocus
                 role="menuitem"
                 href={n.href as string}
                 key={n.label}
