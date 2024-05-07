@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BiChevronsRight } from "react-icons/bi";
 import { css } from "../../../styled-system/css";
 import { flex, stack } from "../../../styled-system/patterns";
@@ -15,21 +16,36 @@ const Contact = () => {
         className={flex({
           direction: { mdDown: "column", lgTo2xl: "row" },
           w: "100%",
+          pos: "relative",
           //    h: "300px",
           align: "center",
           p: { smDown: 20, smToMd: 20, md: 20, lg: 40, "2xl": 40 },
           justify: "space-between",
           //bgColor: "primary",
           bgColor: "primary !important",
-          bgImage: "url('/assets/rp2.jpg') !important",
           bgBlendMode: "overlay",
           bgRepeat: "no-repeat",
           bgPosition: "center",
           bgSize: "cover",
         })}
       >
+        <Image
+          alt="Mountains"
+          src={"/assets/rp2.jpg"}
+          quality={100}
+          fill
+          sizes="100vw"
+          className={css({
+            opacity: 0.2,
+            zIndex: 1,
+          })}
+          style={{
+            objectFit: "cover",
+          }}
+        />
         <div
           className={stack({
+            zIndex: 5,
             gap: 30,
             w: { smDown: "100%", md: "100%", lg: "50%", "2xl": "50%" },
             "& h1": {
@@ -54,6 +70,7 @@ const Contact = () => {
         </div>
         <div
           className={stack({
+            zIndex: 5,
             w: {
               smDown: "100%",
               smToMd: "100%",

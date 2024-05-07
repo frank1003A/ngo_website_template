@@ -60,10 +60,6 @@ export const Volunteer = () => {
             data-aos="fade-up"
           />
           <div
-            /** initial={{ opacity: 0, y: "50%", filter: "alpha(opacity=0)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "alpha(opacity=100)" }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            viewport={{ once: true }} */
             data-aos="fade-up"
             className={stack({
               p: "20px",

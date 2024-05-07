@@ -1,4 +1,5 @@
 //import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   BiLogoFacebookSquare,
   BiLogoInstagram,
@@ -27,7 +28,6 @@ const Card = ({ img, name, role, delay, ...rest }: CardProps) => {
       {...rest}
     >
       <div
-        style={{ backgroundImage: `url('${img}')` }}
         className={box({
           w: "100%",
           h: 150,
@@ -37,6 +37,15 @@ const Card = ({ img, name, role, delay, ...rest }: CardProps) => {
           bgPosition: "center",
         })}
       >
+        <Image
+          alt={`${name} ${img}`}
+          src={img}
+          fill
+          sizes="(min-width: 808px) 50vw, 100vw"
+          style={{
+            objectFit: "cover",
+          }}
+        />
         <div
           className={stack({
             w: "30px",

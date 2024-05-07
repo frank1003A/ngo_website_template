@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BiCalendar, BiChevronsRight } from "react-icons/bi";
 import { css } from "../../../styled-system/css";
 import { box, flex, stack } from "../../../styled-system/patterns";
@@ -41,12 +42,18 @@ const Card = () => {
           w: 150,
           h: 100,
           pos: "relative",
-          bgImage: `url('/assets/rp1.jpg')`,
-          bgRepeat: "no-repeat",
-          bgSize: "cover",
-          bgPosition: "center",
         })}
-      ></div>
+      >
+        <Image
+          alt="event banner"
+          src={"/assets/rp1.jpg"}
+          fill
+          sizes="(min-width: 808px) 50vw, 100vw"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      </div>
       <div
         className={stack({
           "& h2": {
